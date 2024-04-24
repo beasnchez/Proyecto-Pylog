@@ -1,0 +1,29 @@
+libros('Fabricante de Lágrimas', 'Erin Doom', 'Romance Contemporáneo').
+libros('Juego de Tronos', 'George R. R. Martin', 'Fantasia Épica').
+libros('Choque de Reyes', 'George R. R. Martin', 'Fantasia Épica').
+libros('Festin de Cuervos', 'George R. R. Martin', 'Fantasia Épica').
+libros('Tormenta de Espadas', 'George R. R. Martin', 'Fantasia Épica').
+libros('Danza de Dragones', 'George R. R. Martin', 'Fantasia Épica').
+libros('Harry Potter y la Piedra Filosofal', 'J. K. Rowling', 'Fantasia').
+libros('Harry Potter y la Cámara de los Secretos', 'J. K. Rowling', 'Fantasia').
+libros('Harry Potter y el Prisionero de Askaban', 'J. K. Rowling', 'Fantasia').
+libros('Harry Potter y el Torneo de los Tres Magos', 'J. K. Rowling', 'Fantasia').
+libros('Harry Potter y la Orden del Fénix', 'J. K. Rowling', 'Fantasia').
+libros('Harry Potter y el Príncipe Mestizo', 'J. K. Rowling', 'Fantasia').
+libros('Harry Potter y las Reliquias de la Muerte', 'J. K. Rowling', 'Fantasia').
+libros('A dos metros de ti', 'Rachel Lippincott', 'Romance Contemporáneo').
+libros('Boulevard', 'Flor M. Salvador', 'Romance Contemporáneo').
+libros('Sigue mi Voz', 'Ariana Godoy', 'Romance Contemporáneo').
+libros('Mi Amor de Wattpad', 'Ariana Godoy', 'Romance Contemporáneo').
+libros('Lascivia', 'Eva Muñóz Benítez', 'Erótica').
+libros('Lujuria', 'Eva Muñóz Benítez', 'Erótica').
+libros('Boss', 'Eva Muñóz Benítez', 'Erótica').
+libros('Cincuenta Sombras de Grey', 'E. L. James', 'Erótica').
+libros('Cincuenta Sombras más Oscuras', 'E. L. James', 'Erótica').
+libros('Cincuenta Sombras Liberadas', 'E. L. James', 'Erótica').
+libros('Despertar', 'L. J. Smith', 'Vampiros').
+libros('Conflictos', 'L. J. Smith', 'Vampiros').
+libros('Entrevista con el Vampiro', 'Anne Rice', 'Vampiros').
+libros('La Revelación', 'Ariana Godoy', 'Vampiros').
+libros('El Nuevo Mundo', 'Ariana Godoy', 'Vampiros').
+libros('Cumbres Borrascosas', 'Emily Bronte', 'Clasicos').
