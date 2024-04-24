@@ -3,21 +3,20 @@ import tkinter as tk
 from tkinter import ttk
 
 prolog = Prolog()
-prolog.consult('book_recommendations.pl') 
+prolog.consult('book_recommendations.pl')
 
 def obtener_recomendaciones(genero):
-    query = "libros(Titulo, Autor, '{genero}')"
+    query = "libros(Titulo, Autor, {})".format(genero)
     recomendaciones = list(prolog.query(query))
     return [(rec["Titulo"], rec["Autor"]) for rec in recomendaciones]
 
 def actualizar_recomendaciones(*args):
     genero = variable_genero.get()
-    recomendaciones = obtener_recomendaciones(genero)
+    recomendaciones = obtener_recomendaciones("'{}'".format(genero))
     lista_libros.delete(0, tk.END)
     for titulo, autor in recomendaciones:
-        lista_libros.insert(tk.END, "{titulo} de {autor}")
+        lista_libros.insert(tk.END, "{} de {}".format(titulo, autor))
 
-# Crear la ventana principal
 raiz = tk.Tk()
 raiz.title("Sistema de Recomendación de Libros")
 raiz.iconbitmap("WhatsApp Image 2024-04-24 at 07.18.04.ico")
