@@ -1,0 +1,42 @@
+from pyswip import Prolog
+import tkinter as tk
+from tkinter import ttk
+
+# Inicializar Prolog
+prolog = Prolog()
+prolog.consult('book_recommendations.pl') 
+
+# Función para obtener recomendaciones de libros basadas en un género
+def obtener_recomendaciones(genero):
+    query = "libros(Titulo, Autor, '{genero}')"
+    recomendaciones = list(prolog.query(query))
+    return [(rec["Titulo"], rec["Autor"]) for rec in recomendaciones]
+
+# Función para actualizar la lista de recomendaciones
+def actualizar_recomendaciones(*args):
+    genero = variable_genero.get()
+    recomendaciones = obtener_recomendaciones(genero)
+    lista_libros.delete(0, tk.END)
+    for titulo, autor in recomendaciones:
+        lista_libros.insert(tk.END, "{titulo} de {autor}")
+
+# Crear la ventana principal
+raiz = tk.Tk()
+raiz.title("Sistema de Recomendación de Libros")
+raiz.iconbitmap("WhatsApp Image 2024-04-24 at 07.18.04")
+
+# Crear un combobox para seleccionar el género
+variable_genero = tk.StringVar()
+etiqueta_genero = ttk.Label(raiz, text="Seleccione un género:")
+etiqueta_genero.pack(pady=5)
+combobox_genero = ttk.Combobox(raiz, textvariable=variable_genero)
+combobox_genero['values'] = ['Fantasía Épica', 'Romance Contemporáneo', 'Clásicos']  # Asegúrate de que estos géneros existan en tu base de conocimientos de Prolog
+combobox_genero.pack(pady=5)
+combobox_genero.bind('<<ComboboxSelected>>', actualizar_recomendaciones)
+
+# Crear un listbox para mostrar las recomendaciones de libros
+lista_libros = tk.Listbox(raiz, width=50, height=15)
+lista_libros.pack(pady=10)
+
+# Iniciar la interfaz gráfica
+raiz.mainloop()
