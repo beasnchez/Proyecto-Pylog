@@ -27,3 +27,8 @@ libros('Entrevista con el Vampiro', 'Anne Rice', 'Vampiros').
 libros('La Revelación', 'Ariana Godoy', 'Vampiros').
 libros('El Nuevo Mundo', 'Ariana Godoy', 'Vampiros').
 libros('Cumbres Borrascosas', 'Emily Bronte', 'Clasicos').
+libros('Matar un ruiseñor', 'Harper Lee', 'Clásico').
+libros('El gran Gatsby', 'F. Scott Fitzgerald', 'Clásico').
+libros('El guardián entre el centeno', 'J.D. Salinger', 'Clásico').
+
+recomendar_por_genero(Genero, Titulo, Autor) :- libros(Titulo, Autor, Genero).
