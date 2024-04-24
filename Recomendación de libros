@@ -23,14 +23,14 @@ def actualizar_recomendaciones(*args):
 # Crear la ventana principal
 raiz = tk.Tk()
 raiz.title("Sistema de Recomendación de Libros")
-raiz.iconbitmap("WhatsApp Image 2024-04-24 at 07.18.04")
+raiz.iconbitmap("WhatsApp Image 2024-04-24 at 07.18.04.ico")
 
 # Crear un combobox para seleccionar el género
 variable_genero = tk.StringVar()
 etiqueta_genero = ttk.Label(raiz, text="Seleccione un género:")
 etiqueta_genero.pack(pady=5)
 combobox_genero = ttk.Combobox(raiz, textvariable=variable_genero)
-combobox_genero['values'] = ['Fantasía Épica', 'Romance Contemporáneo', 'Clásicos']  # Asegúrate de que estos géneros existan en tu base de conocimientos de Prolog
+combobox_genero['values'] = ['Fantasía Épica', 'Romance Contemporáneo', 'Clásicos', 'Erótica', 'Vampiros', 'Fantasia']  
 combobox_genero.pack(pady=5)
 combobox_genero.bind('<<ComboboxSelected>>', actualizar_recomendaciones)
 
